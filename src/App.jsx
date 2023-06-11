@@ -1,9 +1,11 @@
 import "./App.css";
+import { useGlobalContext } from "./context";
 
 function App() {
+  const { data, setData } = useGlobalContext();
   return (
     <>
-      <p>hello world</p>
+      <p>{data.greeting}</p>
     </>
   );
 }
